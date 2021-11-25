@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" autoUpload="Always" serverName="lolipop" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="lolipop">
+        <serverdata>
+          <mappings>
+            <mapping deploy="ecsite" local="$PROJECT_DIR$" web="ecsite" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="lolipop2">
+        <serverdata>
+          <mappings>
+            <mapping deploy="ecsite/css" local="$PROJECT_DIR$/css" web="ecsite/css" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myAutoUpload" value="ALWAYS" />
+  </component>
+</project>

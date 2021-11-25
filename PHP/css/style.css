@@ -1,0 +1,811 @@
+/*リセットCSS*/
+@import url("sanitize.css");
+
+/*全体のフォント*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap');
+html, body {
+    font-family: 'Noto Sans JP', sans-serif;
+    width: 100%;
+    font-size: 15px;
+}
+/*ブラウザの初期設定である余白を消す*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*-----------------------------------全体的なCSS-----------------------------------*/
+/*ヘッダー全体*/
+header{
+    background: black;
+    color: white;
+    height: 110px;
+    display: flex;
+}
+/*サイドバー*/
+.contentA{
+    background: white;
+    width: 450px;
+    height: auto;
+    margin: 1em 1em 1em 10em;
+}
+.contentA li{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    list-style: none;
+}
+/*サイドバーのレスポンシブデザイン用の要素を消しています*/
+#menu{
+    display: none;
+}
+/*メイン画面*/
+.contentB{
+    background: white;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    margin-top: 10px;
+    padding-bottom: 5%;
+}
+/*フッター*/
+footer{
+    position: fixed;
+    bottom: 0;
+    background: black;
+    width: 100%;
+    height: 30px;
+    margin-top: auto;
+}
+/*全体*/
+.main{
+    display: flex;
+    min-height: 100%;
+}
+
+
+/*-----------------------------------リンクの色などの設定-----------------------------------*/
+/*全体のエラー文字*/
+.error{
+    color: red;
+}
+/*全体の黒いリンクボタン*/
+.button {
+    display       : inline-block;
+    border-radius : 5%;          /* 角丸       */
+    font-size     : 10pt;        /* 文字サイズ */
+    text-align    : center;      /* 文字位置   */
+    cursor        : pointer;     /* カーソル   */
+    padding       : 7px 32px;   /* 余白       */
+    background    : #000000;     /* 背景色     */
+    color         : #ffffff;     /* 文字色     */
+    line-height   : 1em;         /* 1行の高さ  */
+    transition    : .3s;         /* なめらか変化 */
+    box-shadow    : 3px 3px #666666;  /* 影の設定 */
+    border        : 2px solid #000000;    /* 枠の指定 */
+    margin        : 10px;
+}
+.button:hover {
+    box-shadow    : none;        /* カーソル時の影消去 */
+    color         : #000000;     /* 背景色     */
+    background    : #ffffff;     /* 文字色     */
+}
+/*全体のリンクの色など*/
+a{
+    text-decoration: none;
+    color:black;
+    padding: 0 10px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0) 50%);
+    background-position: 0 0;
+    background-size: 200% auto;
+    transition: .3s;
+}
+a:hover{
+    background-position: -100% 0;
+    color: #fff;
+}
+/*線で囲む要素全般*/
+.box{
+    border: 1px solid;
+    margin-right: 20%;
+    margin-top: 30px;
+    padding: 5%;
+    text-align:center;
+}
+/*↑のboxクラスは中央寄せにしてます。中央に配置したくない要素に使ってね*/
+.ncen{
+    text-align: left;
+}
+
+
+
+/*-----------------------------------ヘッダー-----------------------------------*/
+/*ヘッダーのバナー*/
+.logo{
+    width: 300px;
+    padding-left: 20%;
+}
+/*ヘッダー右側のメニュースマホ版を隠す*/
+.headermenu2 {
+    display: none;
+}
+
+/*ヘッダー右側のメニュー*/
+.headermenu{
+    display: flex;     /*要素を横並びに*/
+    margin-left: auto; /*要素を右寄せ*/
+    margin-top: 40px;
+    padding-right: 5%;
+}
+
+/*ヘッダー右側のメニューのテキストボックス*/
+.header-inner form input {
+    width: 200px;
+    height: 35px;
+    display: block;
+    padding: 0 20px;
+    outline: none;
+    border-radius: 20px;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.header-inner form input::placeholder {
+    font-size: 14px;
+    position: relative;
+    bottom: 2px;
+}
+
+.header-inner form {
+    display: block;
+    position: relative;
+    height: 40px;
+}
+.header-inner form button {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    border:none;
+}
+.header-inner img{
+    width: 25px;
+
+}
+
+/*ヘッダーのアイコン*/
+.headericon{
+    width: 35px;
+}
+
+
+
+/*-----------------------------------インデックス-----------------------------------*/
+/*インデックスの要素を縦並びにする*/
+.index{
+    display: inline-block;
+}
+
+/*香水診断へのリンク*/
+a.btn-gradient {
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 0;
+    background-image: -webkit-gradient(linear, left top, right top, from(#fa709a), to(#fee140));
+    background-image: -webkit-linear-gradient(left, #fa709a 0%, #fee140 100%);
+    background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+}
+
+/*インデックスの大きな花の画像*/
+.top{
+    width: 100%
+}
+
+/*ピックアップなどの文字*/
+.pick-text{
+    padding: 5px 10px;
+    border: 3px solid #000;
+    width:100px;
+    margin-top: 30px;
+
+}
+
+/*ピックアップ要素を横並びに*/
+.img_pick{
+    display: flex;
+}
+/*ピックアップ画像*/
+.check1{
+    width: 200px;
+    height: 200px;
+}
+
+/*ピックアップのリンク*/
+.tate a{
+    text-decoration: none;
+    color:black;
+    transition: 1.0s ;
+}
+.tate a:hover{
+    background-position: 0 0;
+    opacity: 0.5 ;
+}
+
+/*ピックアップ要素を縦並びに*/
+.tate{
+    display: inline-block;
+}
+
+/*インデックスのピックアップ商品*/
+.check2 a{
+    text-decoration: none;
+    color:black;
+}
+
+/*インデックスの下バナー*/
+.check3{
+    margin-top: 10px;
+    width: 700px;
+    height: 80px;
+}
+
+
+/*-----------------------------------会員情報入力-----------------------------------*/
+/*会員情報入力画面のbox*/
+.box-user{
+    margin-left: 30%;
+    text-align: left;
+}
+/*↑の中にある入力項目*/
+#usertitle{
+    margin-top: 15px
+}
+/*テキストボックス*/
+.box1{
+    background-color: gainsboro;
+    width: 60%;
+    height: 25px;
+    border:none
+}
+
+
+
+/*-----------------------------------確認、変更-----------------------------------*/
+
+.text {
+    font-size: large;
+    text-align: left;
+}
+
+table th {/*table内のthに対して*/
+    width: 110px;
+}
+
+table, td, th {
+    padding: 3px 10px;/*上下3pxで左右10px*/
+    border-bottom: 1px solid black;
+}
+table {
+    border-collapse: collapse;
+}
+
+
+
+/*-----------------------------------商品一覧-----------------------------------*/
+/*商品一覧などのリスト表示*/
+.item li{
+    height: 400px;
+    width: 230px;
+    float: left;
+    padding: 5px;
+    text-align:center;
+    display: inline-block;
+}
+/*画像や値段などの要素を縦並びに*/
+.item a {
+    display: block;
+}
+/*要素一つの大きさ*/
+.item_data{
+    height: 300px;
+    margin: 0 auto;
+}
+/*商品一覧に表示される商品画像*/
+.item img{
+    width: 200px;
+}
+
+
+
+/*-----------------------------------商品詳細-----------------------------------*/
+/*商品詳細に表示される画像*/
+.img_detail{
+    width: 350px;
+    margin: 15px;
+}
+/*商品詳細に表示される名前、画像、価格、カートボタンを横並びにする*/
+.detail{
+    display:flex;
+    margin-left: 10%;
+}
+/*商品詳細に表示される名前、価格、カートボタンの上の余白*/
+.detail_name{
+    margin-top: 180px;
+}
+
+
+
+/*-----------------------------------購入画面-----------------------------------*/
+/*カート画面の合計金額用ボックス*/
+.box2{
+    border: 1px solid;
+    margin-right: 20%;
+    margin-top: 2%;
+    display: block;
+    width: 200px;
+    margin-left: auto;
+    padding: 5%;
+    text-align: right;
+}
+.box2 td{
+    width: 10%;
+
+}
+
+/*購入画面についてのCSS*/
+.cash{
+    display:flex;
+}
+/*支払方法*/
+.cash1{
+    margin-top: 20px;
+    width: 500px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------スマホ用CSS---------------------------------------*/
+/*------------------------------------スマホ用CSS---------------------------------------*/
+/*------------------------------------スマホ用CSS---------------------------------------*/
+/*------------------------------------スマホ用CSS---------------------------------------*/
+/*------------------------------------スマホ用CSS---------------------------------------*/
+
+@media only screen and (max-width: 800px) {
+    /*------------------------------------全体---------------------------------------*/
+    *{
+        position: static;
+        font-size: 12px;
+    }
+
+    /*全体のリンクの色など*/
+    a{
+        text-decoration: none;
+        color:black;
+    }
+    a:hover{
+        background-position: 0 0;
+    }
+
+    /*ヘッダー*/
+    header{
+        width:100%;
+        height: 80px;
+        padding-top: 5%;
+    }
+    /*サイドバー*/
+    .contentA{
+        margin-left:10%;
+    }
+    .contentA li{
+        list-style: none;
+    }
+    /*メイン画面*/
+    .contentB{
+        width: 100%;
+    }
+    /*フッター*/
+    footer{
+    }
+    /*全体*/
+    .main{
+        display: block;
+    }
+
+
+    /*------------------------------------全体に使えるクラス---------------------------------------*/
+    /*線で囲む要素全般*/
+    .box{
+        width: auto;
+        border: 1px solid;
+        margin:2%;
+        padding: 5%;
+        text-align: center;
+    }
+    /*↑のboxクラスは中央寄せにしてます。中央に配置したくない要素に使ってね*/
+    .ncen{
+        text-align: left;
+    }
+
+
+    /*------------------------------------ヘッダー---------------------------------------*/
+    /*ヘッダーのバナー*/
+    .logo{
+        margin-top: 2%;
+        width: 70%;
+        margin-left: 5%;
+    }
+    /*ヘッダー右側のメニューPC版を隠す*/
+    .headermenu{
+        display: none;
+    }
+    /*ヘッダー右側のメニュー*/
+    .headermenu2{
+        /*float: right;*/
+        /*display: flex;*/
+        width: 100%;
+        display: inline-block;
+    }
+    /*メニュー上部*/
+    .menu2{
+        float: right;
+        width: 150px;
+        margin-bottom: 5%;
+    }
+    /*メニュー下部*/
+    .search{
+
+    }
+    /*ヘッダー右側のメニューのテキストボックス*/
+    .text {
+        width: 80%;
+        height: 15px;
+        position:relative;
+
+    }
+    /*ヘッダーのアイコン*/
+    .headericon{
+        width:15%;
+    }
+
+
+
+    /*------------------------------------インデックス---------------------------------------*/
+
+    /*インデックスの大きな花の画像*/
+    .top{
+        width: 100%;
+    }
+
+    /*ピックアップ商品の画像*/
+    .check1{
+        width: 120px;
+        height: 120px;
+    }
+
+    /*インデックスの下ノバナー*/
+    .check3{
+        margin: 20px 35px 0 40px;
+        width: 350px;
+        height: 40px;
+    }
+
+
+    /*------------------------------------会員情報入力---------------------------------------*/
+
+    /*会員情報入力画面のbox*/
+    .box-user{
+        margin-left: 0;
+        text-align: left;
+    }
+    /*↑の中にある入力項目*/
+    #usertitle{
+        margin-top: 15px
+    }
+    /*↑の中にある入力エリア*/
+    .box1{
+        width: 90%;
+    }
+
+
+
+    /*------------------------------------会員情報確認、変更---------------------------------------*/
+
+
+
+
+
+    /*------------------------------------商品一覧---------------------------------------*/
+    /*商品一覧などのリスト表示*/
+    .item li{
+        margin-left: 3%;
+        margin-bottom: 3%;
+        width: 160px;
+        height: 300px;
+        float: left;
+        text-align:center;
+        display: inline-block;
+    }
+    .item_data{
+        height: 200px;
+    }
+
+    /*商品一覧に表示される商品画像*/
+    .item img{
+        width: 130px;
+    }
+    .detail{
+        display:block;
+    }
+
+
+
+    /*------------------------------------商品詳細---------------------------------------*/
+    /*商品詳細に表示される画像*/
+    .img_detail{
+        width: 150px;
+    }
+    /*商品詳細に表示される名前、画像、価格、カートボタンを縦並びにする*/
+    .detail{
+        display:block;
+        text-align:center;
+    }
+    /*商品詳細に表示される名前、価格、カートボタンの上の余白*/
+    .detail_name{
+        margin-top: 0;
+        text-align: left;
+        padding: 5px;
+        border-left: 3px solid  #000;
+    }
+
+    .detail_name2{
+        margin-top: 0;
+    }
+
+    /*------------------------------------注文---------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*========================= ここから下はノータッチで！ ===============================*/
+    /*========================= ここから下はノータッチで！ ===============================*/
+    /*========================= ここから下はノータッチで！ ===============================*/
+    /*========================= ハンバーガーメニュ =====================================*/
+    /*========================= ハンバーガーメニュ =====================================*/
+    /*========================= ハンバーガーメニュ =====================================*/
+    /*========================= ナビゲーションのためのCSS ===============================*/
+    /*========================= ナビゲーションのためのCSS ===============================*/
+    /*========================= ナビゲーションのためのCSS ===============================*/
+    /*アクティブになったエリア*/
+    #g-nav.panelactive {
+        /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+        position: fixed;
+        z-index: 999;
+        top: 0;
+        width: 50%;
+        height: 100vh;
+    }
+
+    /*丸の拡大*/
+    .circle-bg {
+        position: fixed;
+        z-index: 3;
+        /*丸の形*/
+        width: 15px;
+        height: 250px;
+        border-radius: 50%;
+        background: #999;
+        /*丸のスタート位置と形状*/
+        transform: scale(0); /*scaleをはじめは0に*/
+        left: -50px;
+        top: -50px;
+        transition: all .6s; /*0.6秒かけてアニメーション*/
+    }
+
+    .circle-bg.circleactive {
+        transform: scale(50); /*クラスが付与されたらscaleを拡大*/
+    }
+
+    /*ナビゲーションの縦スクロール*/
+    #g-nav-list {
+        display: none; /*はじめは表示なし*/
+        /*ナビの数が増えた場合縦スクロール*/
+        position: fixed;
+        z-index: 999;
+        width: 100%;
+        height: 100vh;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    #g-nav.panelactive #g-nav-list {
+        display: block; /*クラスが付与されたら出現*/
+    }
+
+    /*ナビゲーション*/
+    #g-nav ul {
+        opacity: 0; /*はじめは透過0*/
+        /*ナビゲーション天地中央揃え※レイアウトによって調整してください。不必要なら削除*/
+        position: absolute;
+        z-index: 999;
+        top: 5%;
+    }
+
+    /*背景が出現後にナビゲーションを表示*/
+    #g-nav.panelactive ul {
+        opacity: 1;
+    }
+
+    /* 背景が出現後にナビゲーション li を表示※レイアウトによって調整してください。不必要なら削除*/
+    #g-nav.panelactive ul li {
+        animation-name: gnaviAnime;
+        animation-duration: 1s;
+        animation-delay: .2s; /*0.2 秒遅らせて出現*/
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+
+    @keyframes gnaviAnime {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+
+    /*リストのレイアウト設定*/
+    #g-nav li {
+        text-align: center;
+        list-style: none;
+    }
+
+    #g-nav li a {
+        color: #333;
+        text-decoration: none;
+        padding: 10px;
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: bold;
+    }
+
+
+    /*========= ボタンのためのCSS ===============*/
+    .openbtn1 {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+        z-index: 9999; /*ボタンを最前面に*/
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+    }
+
+    /*×に変化*/
+    .openbtn1 span {
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+        left: 14px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #666;
+        width: 45%;
+    }
+
+    .openbtn1 span:nth-of-type(1) {
+        top: 15px;
+    }
+
+    .openbtn1 span:nth-of-type(2) {
+        top: 23px;
+    }
+
+    .openbtn1 span:nth-of-type(3) {
+        top: 31px;
+    }
+
+    .openbtn1.active span:nth-of-type(1) {
+        top: 18px;
+        left: 18px;
+        transform: translateY(6px) rotate(-45deg);
+        width: 30%;
+    }
+
+    .openbtn1.active span:nth-of-type(2) {
+        opacity: 0;
+    }
+
+    .openbtn1.active span:nth-of-type(3) {
+        top: 30px;
+        left: 18px;
+        transform: translateY(-6px) rotate(45deg);
+        width: 30%;
+    }
+
+    /*========= レイアウトのためのCSS ===============*/
+    h1 {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+        text-align: center;
+        margin: 0 0 30px 0;
+    }
+
+    p {
+        margin-top: 20px;
+    }
+
+    small {
+        color: #fff;
+        display: block;
+        text-align: center;
+    }
+
+    #header {
+        width: 100%;
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+    }
+
+    section {
+        padding: 100px 30px;
+    }
+
+    section:nth-child(2n) {
+        background: #f3f3f3;
+    }
+
+    #footer {
+        background: #333;
+        padding: 20px;
+    }
+}

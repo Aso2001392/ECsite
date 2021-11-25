@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="aaaf5ba0-66ae-4d1a-8c7a-3f743facc976" name="lolipop" url="http://aso2001392.hiho.jp/">
+        <fileTransfer host="ftp.lolipop.jp" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+      <webServer id="dc05029e-617f-421a-853b-e7f07101aaa4" name="lolipop2" url="http://aso2001392.hiho.jp/">
+        <fileTransfer host="ftp.lolipop.jp" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
