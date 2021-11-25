@@ -30,6 +30,7 @@
         </table>
         </div>
 
+
         <!--購入合計を別のボックスに配置-->
         <div class="box2">
             <table>
