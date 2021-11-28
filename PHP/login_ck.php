@@ -2,11 +2,11 @@
 <?php require_once 'css/db.php'; ?>
 <?php
 
-$sql=$pdo->prepare('select * from customers where pass=? and mail=?');
+$sql=$pdo->prepare('select * from customers where pass=? and mail=? and del_flag=0');
 $sql->execute([$_POST['password'],$_POST['mail']]);
 foreach ($sql as $row){
     $_SESSION['customer']=['id'=>$row['customer_id'],'name'=>$row['name'],'address'=>$row['address'],
-        'postal'=>$row['postal_code'],'mail'=>$row['mail'],'pass'=>$row['pass']];
+        'postal'=>$row['postal_code'],'mail'=>$row['mail'],'pass'=>$row['pass'],'flag'=>$row['del_flag']];
 }
 
 //ログインできればindex.phpに飛ぶ。できなければ変数login_checkに１を代入してlogin.phpに受け渡す
