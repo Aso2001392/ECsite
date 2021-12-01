@@ -8,47 +8,67 @@
         <div class="contentB">
             <div class="box">
                 <table>
-                <th>商品画像</th><th>商品名</th>
-                <th>価格</th><th>個数</th><th>小計</th><th></th>
-                <?php
-                $total=0;
-                foreach ($_SESSION['product'] as $id=>$product){
-                echo '<tr>';
-                echo '<td><a href="detail.php?id=',$id,'">','<img src="img/items/',$id,'.jpg" width="100"></a></td>';
-                echo '<td>',$product['name'],'</td>';
-                echo '<td>',$product['price'],'</td>';
-                echo '<td>',$product['count'],'</td>';
-                $subtotal=$product['price']*$product['count'];
-                $total+=$subtotal;
-                echo '<td>',$subtotal,'</td>';
-                echo '<td><a href="cart-delete.php?id=',$id,'">削除</a></td>';
-                echo '</tr>';
-                }?>
+                    <th>商品画像</th><th>商品名</th>
+                    <th>価格</th><th>個数</th><th>小計</th><th></th>
+                    <?php
+                    $total=0;
+                    foreach ($_SESSION['product'] as $id=>$product){
+                        echo '<tr>';
+                        echo '<td><a href="detail.php?id=',$id,'">','<img src="img/items/',$id,'.jpg" width="100"></a></td>';
+                        echo '<td>',$product['name'],'</td>';
+                        echo '<td>',$product['price'],'</td>';
+                        echo '<td>',$product['count'],'</td>';
+                        $subtotal=$product['price']*$product['count'];
+                        $total+=$subtotal;
+                        echo '<td>',$subtotal,'</td>';
+                        echo '<td><a href="cart-delete.php?id=',$id,'">削除</a></td>';
+                        echo '</tr>';
+                    }?>
                 </table>
             </div>
 
             <div class="cash">
                 <div class="cash1">
-                    *******************<br>
-                    *******************<br>
-                    ここに支払方法とかいれる<br>
-                    *******************<br>
-                    *******************<br>
+                    <br><br>
+                    <h4>-配送先住所-</h4>
+                    <div class="send_ad">
+                        <input type="radio" name="send-ad" value="0">登録住所
+                        <p>郵便番号<br><?PHP echo $_SESSION['customer']['postal'] ?></p>
+                        <p>住所<br><?php echo $_SESSION['customer']['address']?></p>
+                    </div>
+                    <div class="send_ad">
+                        <input type="radio" name="send-ad" value="1">別の住所に送る
+                        <p>郵便番号<br><input type="text" name="new_postal"></p>
+                        <p>住所<br><input type="text"name="new_address"></p>
+                    </div>
+                    <br><br>
+                    <h4>-支払方法-</h4>
+                    <div class="payment">
+                        <input type="radio" name="pay" value="元払い">元払い
+                    </div>
+                    <div class="payment">
+                        <input type="radio" name="pay" value="銀行振込">銀行振込
+                    </div>
+                    <br><br>
+                    <h4>-お届け予定日-</h4>
+                    <p><?php
+                        $today = date("Y/m/d",strtotime("+1 week"));
+                        echo $today; ?></p>
                 </div>
                 <div class="box2">
-                <table>
-                    <tr>
-                        <td>小計</td><td><?=$total ?></td>
-                    </tr>
-                    <tr>
-                        <td>送料</td><td>600</p></td>
-                    </tr>
-                    <tr>
-                        <!-- 送料込みの値段 -->
-                        <?php $total_price=($total+=600); ?>
-                        <td>合計</td><td><?=$total_price ?></p></td>
-                    </tr>
-                </table>
+                    <table>
+                        <tr>
+                            <td>小計</td><td><?=$total ?></td>
+                        </tr>
+                        <tr>
+                            <td>送料</td><td>600</p></td>
+                        </tr>
+                        <tr>
+                            <!-- 送料込みの値段 -->
+                            <?php $total_price=($total+=600); ?>
+                            <td>合計</td><td><?=$total_price ?></p></td>
+                        </tr>
+                    </table>
                     <a href="order-out.php" class="button">確認へ</a>
                 </div>
 
