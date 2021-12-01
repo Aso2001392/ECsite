@@ -248,7 +248,7 @@ a.btn-gradient {
 
 /*インデックスの下バナー*/
 .check3{
-    margin-top: 10px;
+    margin-top: 50px;
     width: 700px;
     height: 80px;
 }
@@ -432,6 +432,7 @@ table {
     /*メイン画面*/
     .contentB{
         width: 100%;
+        margin: 50px 5px 30px 5px;
     }
     /*フッター*/
     footer{
@@ -439,7 +440,6 @@ table {
     /*全体*/
     .main{
         display: block;
-        margin: 50px 20px 30px 20px;
     }
 
 
@@ -509,14 +509,14 @@ table {
 
     /*ピックアップ商品の画像*/
     .check1{
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
     }
 
     /*インデックスの下ノバナー*/
     .check3{
-        margin: 20px 35px 0 40px;
-        width: 350px;
+        margin: 50px 35px 0 20px;
+        width: 320px;
         height: 40px;
     }
 
