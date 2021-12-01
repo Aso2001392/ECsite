@@ -370,6 +370,16 @@ table {
     width: 500px;
 }
 
+.send_ad{
+    display: inline-block;
+    width: 200px;
+}
+
+.payment{
+    display: inline-block;
+    width: 200px;
+}
+
 
 
 
