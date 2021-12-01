@@ -19,6 +19,7 @@
                     </div>
                     <hr></hr>
 
+
                     <label>Q2.果物の匂いが好き</label>
                     <div class="select">
                         <input type="radio" name="fruit" value="2" required>はい
