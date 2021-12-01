@@ -124,7 +124,9 @@ a:hover{
 .logo{
     width: 300px;
     padding-left: 20%;
+    padding-top: 6%;
 }
+
 /*ヘッダー右側のメニュースマホ版を隠す*/
 .headermenu2 {
     display: none;
@@ -246,7 +248,7 @@ a.btn-gradient {
 
 /*インデックスの下バナー*/
 .check3{
-    margin-top: 10px;
+    margin-top: 50px;
     width: 700px;
     height: 80px;
 }
@@ -344,15 +346,19 @@ table {
     margin-right: 20%;
     margin-top: 2%;
     display: block;
-    width: 200px;
+    width: 240px;
     margin-left: auto;
     padding: 5%;
     text-align: right;
 }
 .box2 td{
-    width: 10%;
+    width: 30%;
 
 }
+.cart1{
+    width: 100px;
+}
+
 
 /*購入画面についてのCSS*/
 .cash{
@@ -426,6 +432,7 @@ table {
     /*メイン画面*/
     .contentB{
         width: 100%;
+        margin: 50px 5px 30px 5px;
     }
     /*フッター*/
     footer{
@@ -502,14 +509,14 @@ table {
 
     /*ピックアップ商品の画像*/
     .check1{
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
     }
 
     /*インデックスの下ノバナー*/
     .check3{
-        margin: 20px 35px 0 40px;
-        width: 350px;
+        margin: 50px 35px 0 20px;
+        width: 320px;
         height: 40px;
     }
 
@@ -586,6 +593,11 @@ table {
     }
 
     /*------------------------------------注文---------------------------------------*/
+
+    .cart1{
+        width: 50px;
+    }
+
 
 
 
