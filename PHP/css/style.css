@@ -190,6 +190,7 @@ a:hover{
 
 /*香水診断へのリンク*/
 a.btn-gradient {
+    font-size: 20px;
     color: #fff;
     border: 2px solid #fff;
     border-radius: 0;
@@ -202,7 +203,7 @@ a.btn-gradient {
 
 /*インデックスの大きな花の画像*/
 .top{
-    width: 100%
+    height: 350px;
 }
 
 /*ピックアップなどの文字*/
@@ -325,7 +326,7 @@ table {
 /*商品詳細に表示される画像*/
 .img_detail{
     width: 350px;
-    margin: 15px;
+    margin: 5%;
 }
 /*商品詳細に表示される名前、画像、価格、カートボタンを横並びにする*/
 .detail{
@@ -340,6 +341,11 @@ table {
 
 
 /*-----------------------------------購入画面-----------------------------------*/
+/*スマホ用カートを消す*/
+.cart_phone{
+    display: none;
+}
+
 /*カート画面の合計金額用ボックス*/
 .box2{
     border: 1px solid;
@@ -432,7 +438,7 @@ table {
     /*メイン画面*/
     .contentB{
         width: 100%;
-        margin: 50px 0 30px 0;
+        margin: 30px 0 30px 0;
     }
     /*フッター*/
     footer{
@@ -461,9 +467,9 @@ table {
     /*------------------------------------ヘッダー---------------------------------------*/
     /*ヘッダーのバナー*/
     .logo{
-        margin-top: 2%;
         width: 70%;
-        margin-left: 5%;
+        padding-top: 0;
+        margin-left: 0;
     }
     /*ヘッダー右側のメニューPC版を隠す*/
     .headermenu{
@@ -502,9 +508,13 @@ table {
 
     /*------------------------------------インデックス---------------------------------------*/
 
+    .index{
+        margin-left: 10px;
+    }
+
     /*インデックスの大きな花の画像*/
     .top{
-        width: 100%;
+        height: 150px;
     }
 
     /*ピックアップ商品の画像*/
@@ -592,10 +602,49 @@ table {
         margin-top: 0;
     }
 
-    /*------------------------------------注文---------------------------------------*/
+    /*------------------------------------カート---------------------------------------*/
 
-    .cart1{
-        width: 50px;
+    /*PC用カートを消す*/
+    .cart_pc{
+        display: none;
+    }
+
+    /*スマホ用カートを表示させる*/
+    .cart_phone{
+        display: inline-block;
+        width: 100%;
+    }
+
+    /*画像、名前、値段などの要素*/
+    .cart_p_item{
+        height: 120px;
+        padding-left: 10px;
+        margin-top: 10px;
+    }
+
+    /*画像を左側に*/
+    .cart_img img{
+        width: 80px;
+    }
+    .cart_img{
+        float: left;
+        width: 120px;
+        height: 120px;
+    }
+
+    /*名前、値段などの要素*/
+    .cart_data{
+        text-align: left;
+    }
+
+
+
+    /*------------------------------------注文---------------------------------------*/
+    /*カート画面の合計金額用ボックス*/
+    .box2{
+        margin-right: 2%;
+        margin-left: auto;
+        margin-top: auto;
     }
 
 

@@ -6,12 +6,13 @@
 
         <!-- メイン画面 -->
         <div class="contentB">
+
+            <img src="img/topimg.png" class="top"><br>
+            <a href="select-in.php" class="btn btn-gradient">
+                <span>香水診断はこちら</span></a><br>
+
             <!--インデックスクラスとして囲む-->
             <div class="index">
-                <img src="img/topimg.png" class="top"><br>
-                <a href="select-in.php" class="btn btn-gradient">
-                    <span>香水診断はこちら</span></a><br>
-
                 <p class="pick-text">RANKING</p>
                 <div class="img_pick">
                     <div class="tate">
