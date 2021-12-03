@@ -8,7 +8,6 @@
         <div class="contentB">
             <!-- 購入履歴検索　-->
             <?php
-            $total=0;
             if (isset($_SESSION['customer'])) {
                 $sql_purchase = $pdo->prepare('select * from purchase where customer_id=? order by order_id desc');
                 $sql_purchase->execute([$_SESSION['customer']['id']]);
@@ -17,6 +16,7 @@
                     $sql_detail->execute([$row_purchase['order_id']]);
                     $sql_day = $pdo->prepare('select purchase_date from purchase where order_id=?');
                     $sql_day->execute([$row_purchase['order_id']]);
+                    $total=0;
                     ?>
                     <!--購入履歴毎に表示-->
                     <br><table><tr><th>商品画像</th><th>商品名</th><th>価格</th><th>個数</th><th>小計</th></tr>
