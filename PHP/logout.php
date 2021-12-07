@@ -7,14 +7,8 @@
         <!-- メイン画面 -->
         <div class="contentB">
             <div class="box">
-                <?php
-                if(isset($_SESSION['customer'])){
-                    unset($_SESSION['customer']);
-                    unset($_SESSION['product']);
-                    echo '<p>ログアウトしました</p>';
-                }
-                ?>
-                <a href="index.php" class="button">トップページへ</a>
+                <p>ログアウトしますか？</p>
+                <a href="logout-out.php" class="button">ログアウト</a>
             </div>
         </div>
     </div>
