@@ -9,6 +9,7 @@
             <div class="box">
                 <?php
                 $purchase_id=1;
+                $day = date("Y/m/d");
                 $send_day = date("Y/m/d",strtotime("+1 week"));
                 foreach ($pdo->query('select max(order_id) from purchase') as $row) {
                     $purchase_id = (int)$row['max(order_id)'] + 1;
@@ -18,8 +19,8 @@
                     $subtotal=$product['price']*$product['count'];
                     $total+=$subtotal;
                 }
-                $sql=$pdo->prepare('insert into purchase values(?,?,CURDATE(),?,?,?,?)');
-                if($sql->execute([$purchase_id,$_SESSION['customer']['id'],$total,$_POST['send_name'],$_POST['pay_name'],$send_day])){
+                $sql=$pdo->prepare('insert into purchase values(?,?,?,?,?,?,?)');
+                if($sql->execute([$purchase_id,$_SESSION['customer']['id'],$day,$total,$_POST['send_name'],$_POST['pay_name'],$send_day])){
                     foreach ($_SESSION['product'] as $product_id => $product){
                         $sql = $pdo->prepare('insert into purchase_detail values(null,?,?,?,?)');
                         $sql->execute([$purchase_id,$product_id,$product['count'],$product['price']*$product['count']]);
