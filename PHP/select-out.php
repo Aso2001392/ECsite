@@ -33,8 +33,8 @@
                     //ブリット フォーハー
                     $id_sweet="I0033";
                     $name_sweet="ブリット　フォーハー";
-                    "甘い香りがほのかに香る、センシュアルで魅惑的なフローラルフレグランス。</br>
-                                 フレッシュな洋ナシ、シュガーアーモンド、そして濃厚なバニラが響きあいます。</br>";
+                    $msg_sweet="甘い香りがほのかに香る、センシュアルで魅惑的なフローラルフレグランス。</br>
+フレッシュな洋ナシ、シュガーアーモンド、そして濃厚なバニラが響きあいます。</br>";
                     break;
                 case '1':
                     //イリシット
@@ -161,7 +161,7 @@
                             <img src="img/items/<?=$id_sweet?>.jpg"></a>
                 </div>
                 <div class="recom_de">
-                    <?php echo $name_sweet ?><br>
+                    <h4><?php echo $name_sweet ?></h4><br>
                     <?php echo $msg_sweet ?><br>
                     <a href="detail.php?id=<?=$id_sweet?>" class="button">商品詳細へ</a>
                 </div>
@@ -173,7 +173,7 @@
                         <img src="img/items/<?=$id_kankitu?>.jpg"></a>
             </div>
             <div class="recom_de">
-                <?php echo $name_kankitu ?><br>
+                <h4><?php echo $name_kankitu ?></h4><br>
                 <?php echo $msg_kankitu ?><br>
                 <a href="detail.php?id=<?=$id_kankitu?>" class="button">商品詳細へ</a>
             </div>
@@ -185,7 +185,7 @@
                     <img src="img/items/<?=$id_sea?>.jpg"></a>
         </div>
         <div class="recom_de">
-            <?php echo $name_sea ?><br>
+            <h4><?php echo $name_sea ?></h4><br>
             <?php echo $msg_sea ?><br>
             <a href="detail.php?id=<?=$id_sea?>" class="button">商品詳細へ</a>
         </div>
