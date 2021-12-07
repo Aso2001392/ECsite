@@ -75,32 +75,38 @@
             <form action="order-out.php" method="post" >
                 <div class="cash">
                     <div class="cash1">
-                        <br><br>
-                        <h4>-配送先住所-</h4>
-                        <div class="send_ad">
-                            <input type="radio" name="send_name" value="0" checked>登録住所
-                            <p>郵便番号<br><?PHP echo $_SESSION['customer']['postal'] ?></p>
-                            <p>住所<br><?php echo $_SESSION['customer']['address']?></p>
+                        <div class="cash2">
+                            <div class="send_ad">
+                                <h4>-配送先住所-</h4>
+                                <input type="radio" name="send_name" value="0" checked>登録住所
+                                <p>郵便番号<br><?PHP echo $_SESSION['customer']['postal'] ?></p>
+                                <p>住所<br><?php echo $_SESSION['customer']['address']?></p>
+                            </div>
+                            <div class="send_ad">
+                                <br>
+                                <input type="radio" name="send_name" value="1">別の住所に送る
+                                <p>郵便番号<br><input type="text" name="new_postal" value="<?php echo $_SESSION['customer']['postal']?>"></p>
+                                <p>住所<br><input type="text"name="new_address" value="<?php echo $_SESSION['customer']['address']?>"></p>
+                            </div>
                         </div>
-                        <div class="send_ad">
-                            <input type="radio" name="send_name" value="1">別の住所に送る
-                            <p>郵便番号<br><input type="text" name="new_postal" value="<?php echo $_SESSION['customer']['postal']?>"></p>
-                            <p>住所<br><input type="text"name="new_address" value="<?php echo $_SESSION['customer']['address']?>"></p>
-                        </div>
-                        <br><br>
+
                         <h4>-支払方法-</h4>
                         <div class="payment">
                             <input type="radio" name="pay" value="元払い" checked>元払い
                         </div>
                         <div class="payment">
                             <input type="radio" name="pay" value="銀行振込">銀行振込
-                        </div>
-                        <br><br>
+                        </div><br>
+
                         <h4>-お届け予定日-</h4>
                         <p><?php
                             $today = date("Y/m/d",strtotime("+1 week"));
-                            echo $today; ?></p>
+                            echo $today; ?>
                     </div>
+                    <br>
+
+
+                    <!--                    <div class="box_cash">-->
                     <div class="box2">
                         <table>
                             <tr>
@@ -117,6 +123,8 @@
                         </table>
                         <button type="submit" class="button">確認へ</button>
                     </div>
+                    <!--                    </div>-->
+
                 </div>
             </form>
         </div>

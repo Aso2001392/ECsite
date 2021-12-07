@@ -288,7 +288,7 @@ table th {/*table内のthに対して*/
 
 table, td, th {
     padding: 3px 10px;/*上下3pxで左右10px*/
-    border-bottom: 1px solid black;
+    border-bottom: 0.5px solid black;
 }
 table {
     border-collapse: collapse;
@@ -340,7 +340,7 @@ table {
 
 
 
-/*-----------------------------------購入画面-----------------------------------*/
+/*-----------------------------------カート-----------------------------------*/
 /*スマホ用カートを消す*/
 .cart_phone{
     display: none;
@@ -348,41 +348,111 @@ table {
 
 /*カート画面の合計金額用ボックス*/
 .box2{
+    text-align: right;
     border: 1px solid;
-    margin-right: 20%;
-    margin-top: 2%;
     display: block;
     width: 240px;
-    margin-left: auto;
     padding: 5%;
-    text-align: right;
+    margin-top: 2%;
+    margin-right: 20%;
+    margin-left: auto;
 }
+
 .box2 td{
     width: 30%;
 
 }
-.cart1{
-    width: 100px;
-}
 
+
+
+
+/*-----------------------------------購入画面-----------------------------------*/
 
 /*購入画面についてのCSS*/
 .cash{
     display:flex;
+    margin-top: 20px;
+}
+.cash1{
+    display:inline-block;
 }
 /*支払方法*/
-.cash1{
+.cash2{
+    display:flex;
     margin-top: 20px;
     width: 500px;
 }
+.send_ad{
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
 
-.order1{
+
+
+
+/*-----------------------------------購入確認画面-----------------------------------*/
+.order_t td{
+    width: 250px;
+    text-align: right;
+}
+
+.order_t2 {
+    margin-right: 0;
+}
+
+/*購入ボタンを中央寄せに*/
+.order_b{
+    margin-top: 10px;
+    margin-left: 35%;
+
+}
+
+
+
+
+/*-----------------------------------アンケート-----------------------------------*/
+
+.sen{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.select{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.abc{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+/*画像、名前、値段などの要素*/
+.recom{
+    height: 200px;
+    padding-left: 10px;
+    margin-top: 30px;
+}
+
+/*画像を左側に*/
+.recom_img{
+    float: left;
+    margin: 0 auto;
+    height: 180px;
+    width: 270px;
+}
+.recom_img img{
+    height: 180px;
+}
+
+
+
+/*名前、説明などの要素*/
+.recom_de{
     text-align: left;
 }
 
-.order2{
-    text-align: right;
-}
 
 .abc{
     cursor: pointer;
@@ -418,49 +488,6 @@ table {
 
 input:checked + .select::after {
     opacity: 1;
-}
-
-/*-----------------------------------アンケート-----------------------------------*/
-
-.sen{
-    margin-top:10px;
-    margin-bottom:10px;
-}
-
-.select{
-    margin-top:10px;
-    margin-bottom:10px;
-}
-
-.abc{
-    margin-right: 10px;
-    margin-left: 10px;
-}
-
-
-/*画像、名前、値段などの要素*/
-.recom{
-    height: 200px;
-    padding-left: 10px;
-    margin-top: 10px;
-}
-
-/*画像を左側に*/
-.recom_img{
-    float: left;
-    margin: 0 auto;
-    height: 180px;
-    width: 270px;
-}
-.recom_img img{
-    height: 180px;
-}
-
-
-
-/*名前、説明などの要素*/
-.recom_de{
-    text-align: left;
 }
 
 
@@ -739,7 +766,25 @@ input:checked + .select::after {
 
 
 
-
+    /*------------------------------------購入---------------------------------------*/
+    /*購入画面についてのCSS*/
+    .cash{
+        width: 100%;
+        display: block;
+        float: left;
+        margin: 0 0 20px 0;
+    }
+    .cash1{
+        width: 100%;
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+    /*支払方法*/
+    .cash2{
+        display: inline-block;
+    }
+    .send_ad{
+    }
 
 
 
