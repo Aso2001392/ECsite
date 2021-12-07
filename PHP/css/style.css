@@ -1,4 +1,35 @@
-/*リセットCSS*/
+Skip to content
+Search or jump to…
+Pull requests
+Issues
+Marketplace
+Explore
+
+@Aso2001377
+Aso2001392
+/
+ECsite
+Public
+1
+00
+Code
+Issues
+Pull requests
+Actions
+Projects
+Wiki
+Security
+Insights
+ECsite/PHP/css/style.css
+@Aso2001377
+Aso2001377 Merge remote-tracking branch 'origin/main'
+Latest commit de4ff7b 4 days ago
+History
+3 contributors
+@Aso2001377@Aso2001392@Aso2001409
+873 lines (706 sloc)  18.4 KB
+
+    /*リセットCSS*/
 @import url("sanitize.css");
 
 /*全体のフォント*/
@@ -376,9 +407,49 @@ table {
     width: 500px;
 }
 
+.order1{
+    text-align: left;
+}
 
+.order2{
+   text-align: right;
+}
 
+.abc{
+    cursor: pointer;
+    padding-left: 30px;
+    position: relative;
+}
 
+.abc::before,
+.abc::after {
+    content: "";
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+.abc::before {
+    background-color: #fff;
+    border: 1px solid #008000;
+    height: 20px;
+    width: 20px;
+    left: 5px;
+}
+
+.abc::after {
+    background-color: #008000;
+    opacity: 0;
+    height: 16px;
+    width: 16px;
+    left: 7px;
+}
+
+input:checked + .select::after {
+    opacity: 1;
+}
 
 
 
@@ -646,6 +717,8 @@ table {
         margin-left: auto;
         margin-top: auto;
     }
+
+
 
 
 
