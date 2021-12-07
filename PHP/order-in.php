@@ -6,28 +6,72 @@
 
         <!-- メイン画面 -->
         <div class="contentB">
-            <div class="box">
-                <table>
-                    <th>商品画像</th><th>商品名</th>
-                    <th>価格</th><th>個数</th><th>小計</th><th></th>
-                    <?php
-                    $total_count=0;
-                    $total=0;
-                    foreach ($_SESSION['product'] as $id=>$product){
-                        echo '<tr>';
-                        echo '<td><a href="detail.php?id=',$id,'">','<img src="img/items/',$id,'.jpg" width="100"></a></td>';
-                        echo '<td>',$product['name'],'</td>';
-                        echo '<td>',$product['price'],'</td>';
-                        echo '<td>',$product['count'],'</td>';
-                        $subtotal=$product['price']*$product['count'];
-                        $total+=$subtotal;
-                        $total_count+=$product['count'];
-                        echo '<td>',$subtotal,'</td>';
-                        echo '<td><a href="cart-delete.php?id=',$id,'">削除</a></td>';
-                        echo '</tr>';
-                    }?>
-                </table>
+
+
+
+            <!--ーーーーーーーーーーーーーーーーーーーーーPC用カート画面ーーーーーーーーーーーーーーーーーーーーーー-->
+            <div class="cart_pc">
+                <div class="box">
+                    <table>
+                        <th>商品画像</th><th>商品名</th>
+                        <th>価格</th><th>個数</th><th>小計</th><th></th>
+                        <?php
+                        $total_count=0;
+                        $total=0;
+                        foreach ($_SESSION['product'] as $id=>$product){
+                            echo '<tr>';
+                            echo '<td><a href="detail.php?id=',$id,'">','<img src="img/items/',$id,'.jpg" width="100"></a></td>';
+                            echo '<td>',$product['name'],'</td>';
+                            echo '<td>',$product['price'],'</td>';
+                            echo '<td>',$product['count'],'</td>';
+                            $subtotal=$product['price']*$product['count'];
+                            $total+=$subtotal;
+                            $total_count+=$product['count'];
+                            echo '<td>',$subtotal,'</td>';
+                            echo '<td><a href="cart-delete.php?id=',$id,'">削除</a></td>';
+                            echo '</tr>';
+                        }?>
+                    </table>
+                </div>
             </div>
+            <!--ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー-->
+
+
+
+
+
+            <!--ーーーーーーーーーーーーーーーーーーーーースマホ用カート画面ーーーーーーーーーーーーーーーーーーーーーー-->
+            <div class="cart_phone">
+                <div class="box">
+                    <?php
+                    $total=0;
+                    foreach ($_SESSION['product'] as $id=>$product){?>
+                        <div class="cart_p_item">
+
+                            <div class="cart_img">
+                                <a href="detail.php?id=<?=$id ?>"><img src="img/items/<?=$id ?>.jpg" ></a></div>
+
+                            <div class="cart_data">
+                                商品名：<?=$product['name'] ?><br>
+                                値段　：<?=$product['price'] ?><br>
+                                個数　：<?=$product['count'] ?><br>
+                                <?php
+                                $subtotal=$product['price']*$product['count'];
+                                $total+=$subtotal; ?>
+
+                                小計　：<?=$subtotal ?><br><br>
+                                <a href="cart_delete.php?id=<?=$id ?>" >削除</a><br>
+                            </div></div>
+                    <?php }?>
+
+                </div>
+            </div>
+
+            <!--ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー-->
+
+
+
+
             <form action="order-out.php" method="post" >
                 <div class="cash">
                     <div class="cash1">
