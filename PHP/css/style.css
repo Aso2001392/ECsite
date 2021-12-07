@@ -1,35 +1,4 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
-
-@Aso2001377
-Aso2001392
-/
-ECsite
-Public
-1
-00
-Code
-Issues
-Pull requests
-Actions
-Projects
-Wiki
-Security
-Insights
-ECsite/PHP/css/style.css
-@Aso2001377
-Aso2001377 Merge remote-tracking branch 'origin/main'
-Latest commit de4ff7b 4 days ago
-History
-3 contributors
-@Aso2001377@Aso2001392@Aso2001409
-873 lines (706 sloc)  18.4 KB
-
-    /*リセットCSS*/
+/*リセットCSS*/
 @import url("sanitize.css");
 
 /*全体のフォント*/
@@ -412,7 +381,7 @@ table {
 }
 
 .order2{
-   text-align: right;
+    text-align: right;
 }
 
 .abc{
@@ -450,6 +419,56 @@ table {
 input:checked + .select::after {
     opacity: 1;
 }
+
+/*-----------------------------------アンケート-----------------------------------*/
+
+.sen{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.select{
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+.abc{
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+/*画像、名前、値段などの要素*/
+.recom{
+    height: 200px;
+    padding-left: 10px;
+    margin-top: 10px;
+}
+
+/*画像を左側に*/
+.recom_img{
+    float: left;
+    margin: 0 auto;
+    height: 180px;
+    width: 270px;
+}
+.recom_img img{
+    height: 180px;
+}
+
+
+
+/*名前、説明などの要素*/
+.recom_de{
+    text-align: left;
+}
+
+
+
+
+
+
+
 
 
 
@@ -717,8 +736,6 @@ input:checked + .select::after {
         margin-left: auto;
         margin-top: auto;
     }
-
-
 
 
 

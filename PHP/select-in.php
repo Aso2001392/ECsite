@@ -38,8 +38,8 @@
 
                     <label>石鹸の匂いが好き</label>
                     <div class="select">
-                        <input type="radio" class="abc"" name="soap" value="2" required>はい
-                        <input type="radio" class="abc" "name="soap" value="0" required>いいえ
+                        <input type="radio" class="abc" name="soap" value="2" required>はい
+                        <input type="radio" class="abc" name="soap" value="0" required>いいえ
                         <input type="radio" class="abc" name="soap" value="1" required>どちらでもない<br>
                     </div>
                     <hr class="sen"></hr>
