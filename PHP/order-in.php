@@ -90,7 +90,7 @@
                             </div>
                         </div>
 
-                        <h4>-支払方法-</h4>
+                        <h4 class="payment">-支払方法-</h4>
                         <div class="payment">
                             <input type="radio" name="pay" value="元払い" checked>元払い
                         </div>
@@ -98,7 +98,7 @@
                             <input type="radio" name="pay" value="銀行振込">銀行振込
                         </div><br>
 
-                        <h4>-お届け予定日-</h4>
+                        <h4 class="payment">-お届け予定日-</h4>
                         <p><?php
                             $today = date("Y/m/d",strtotime("+1 week"));
                             echo $today; ?>

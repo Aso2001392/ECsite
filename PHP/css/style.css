@@ -719,9 +719,7 @@ table {
     /*------------------------------------注文---------------------------------------*/
     /*カート画面の合計金額用ボックス*/
     .box2{
-        margin-right: 2%;
-        margin-left: auto;
-        margin-top: auto;
+        text-align: center;
     }
 
 
@@ -735,14 +733,17 @@ table {
         margin: 0 0 20px 0;
     }
     .cash1{
-        width: 100%;
-        margin-bottom: 20px;
-        margin-left: 20px;
+        text-align: center;
     }
     /*支払方法*/
     .cash2{
         display: inline-block;
     }
+
+    .payment{
+        text-align: center;
+    }
+
     .send_ad{
     }
 
