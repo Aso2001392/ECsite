@@ -28,7 +28,7 @@
                             $total+=$subtotal;
                             $total_count+=$product['count'];
                             echo '<td>',$subtotal,'</td>';
-                            echo '<td><a href="cart-delete.php?id=',$id,'">削除</a></td>';
+                            echo '<td><a href="cart_delete.php?id=',$id,'">削除</a></td>';
                             echo '</tr>';
                         }?>
                     </table>
