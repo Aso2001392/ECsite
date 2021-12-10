@@ -12,25 +12,25 @@
             <div class="box-user">
                 <form action="newuser-out.php" method="post">
                     <div id="usertitle">名前<br>
-                    <input class="box1" type="text" name="name"  placeholder="Name" required></div>
+                        <input class="box1" type="text" name="name"  placeholder="Name" required></div>
 
                     <div id="usertitle">郵便番号<br>
-                        ※ハイフンなしで入力してください。<br>
-                    <input class="box1" type="text" name="postal" placeholder="Postal code" required></div>
+                        <p style="color:crimson">※ハイフンなしの半角数字7桁で入力してください</p>
+                        <input class="box1" type="text" name="postal" placeholder="Postal code" pattern="^([0-9]{7})$" title="※ハイフンなしの半角数字7桁で入力してください" required></div>
 
                     <div id="usertitle">住所<br>
-                    <input class="box1" type="text" name="address" placeholder="Address" required></div>
+                        <input class="box1" type="text" name="address" placeholder="Address" required></div>
 
                     <div id="usertitle">メールアドレス<br>
-                    <input class="box1" type="email" name="mail" placeholder="Email" required></div>
+                        <input class="box1" type="email" name="mail" placeholder="Email" required></div>
 
                     <div id="usertitle">メールアドレス(確認用)<br>
-                        ※上記と同じメールアドレスを入力してください。<br>
-                    <input class="box1" type="email" name="mail2" placeholder="Email" required></div>
+                        <p style="color:crimson">※上記と同じメールアドレスを入力してください。</p>
+                        <input class="box1" type="email" name="mail2" placeholder="Email" required></div>
 
                     <div id="usertitle">パスワード<br>
-                        ※４文字以上１６文字以下で入力してください。<br>
-                    <input class="box1" type="password" name="pass" placeholder="Password" required></div>
+                        <p style="color:crimson">※半角英数字4文字以上16文字以下で入力してください。</p>
+                        <input class="box1" type="password" name="pass" placeholder="Password" pattern="^([a-zA-Z0-9]{4,16})$" title="※半角英数字4文字以上16文字以下で入力してください。" required></div>
 
                     <br><br>
             </div>

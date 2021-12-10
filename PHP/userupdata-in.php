@@ -27,8 +27,8 @@
                         <input class="box1" type="text" name="name" value="<?=$name ?>" />
 
                         <div id="usertitle">郵便番号<br>
-                            ※ハイフンなしで入力してください。</div>
-                        <input class="box1" type="text" name="postal" value="<?=$postal ?>" />
+                            <p style="color:crimson">※ハイフンなしの半角数字7桁で入力してください</p></div>
+                        <input class="box1" type="text" name="postal" pattern="^([0-9]{7})$" title="※ハイフンなしの半角数字7桁で入力してください" value="<?=$postal ?>" />
 
                         <div id="usertitle">住所</div>
                         <input class="box1" type="text" name="address" value="<?=$address ?>" />
@@ -37,18 +37,18 @@
                         <input class="box1" type="email" name="mail" value="<?=$mail ?>" />
 
                         <div id="usertitle">メールアドレス(確認用)<br>
-                            ※上記と同じメールアドレスを入力してください。</div>
+                            <p style="color:crimson">※上記と同じメールアドレスを入力してください。</p></div>
                         <input class="box1" type="email" name="mail2" value="<?=$mail ?>" />
 
                         <div id="usertitle">パスワード<br>
-                            ※４文字以上１６文字以下で入力してください。</div>
-                        <input class="box1" type="password" name="pass" value="<?=$pass ?>" />
+                            <p style="color:crimson">※半角英数字4文字以上16文字以下で入力してください。</p></div>
+                        <input class="box1" type="password" name="pass" pattern="^([a-zA-Z0-9]{4,16})$" title="※半角英数字4文字以上16文字以下で入力してください。" value="<?=$pass ?>" />
                         <input type="hidden" name="id" value="<?=$id ?>" />
                 </div>
                 <br><br>
                 <a href="login.php" class="button">戻る</a>　　<button type="submit" value="send" class="button" >確認画面へ</button></div>
-                </form>
-            </div>
+            </form>
         </div>
+    </div>
     </div>
 <?php require 'css/footer.php'; ?>
