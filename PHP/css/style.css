@@ -398,6 +398,7 @@ table {
 
 .order_t2 {
     margin-right: 0;
+    text-align: -webkit-right;
 }
 
 /*購入ボタンを中央寄せに*/

@@ -28,10 +28,10 @@
 
                         <div id="usertitle">郵便番号<br>
                             <p style="color:crimson">※ハイフンなしの半角数字7桁で入力してください</p></div>
-                        <input class="box1" type="text" name="postal" pattern="^([0-9]{7})$" title="※ハイフンなしの半角数字7桁で入力してください" value="<?=$postal ?>" />
+                        <input class="box1" type="text" name="postal" id="郵便番号" onKeyUp="$('#郵便番号').zip2addr('#住所');" pattern="^([0-9]{7})$" title="※ハイフンなしの半角数字7桁で入力してください" value="<?=$postal ?>" />
 
                         <div id="usertitle">住所</div>
-                        <input class="box1" type="text" name="address" value="<?=$address ?>" />
+                        <input class="box1" type="text" name="address" id="住所" value="<?=$address ?>" />
 
                         <div id="usertitle">メールアドレス</div>
                         <input class="box1" type="email" name="mail" value="<?=$mail ?>" />
