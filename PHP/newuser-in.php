@@ -15,7 +15,7 @@
 
                     <div id="usertitle">郵便番号<br>
                         <p style="color:crimson">※ハイフンなしの半角数字7桁で入力してください</p>
-                        <input class="box1" type="text" name="postal" id="郵便番号" onKeyUp="$('#郵便番号').zip2addr('#住所');" placeholder="Postal code" pattern="^([0-9]{7})$" title="※ハイフンなしの半角数字7桁で入力してください" required></div>
+                        <input class="box1" type="text" name="postal" id="郵便番号" onKeyUp="$('#郵便番号').zip2addr('#住所');" placeholder="Postal code" pattern="^([0-9]{7})$" title="※ハイフンなしの半角数字7桁で入力してください" autocomplete="off" required></div>
 
                     <div id="usertitle">住所<br>
                         <input class="box1" type="text" name="address" id="住所" placeholder="Address" required></div>
