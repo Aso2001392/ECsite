@@ -20,7 +20,7 @@
                             echo '<input type="hidden" name="postal_cord" value="',$_SESSION['customer']['postal'],'"><br>';
                         }else if($postal==1){
                             echo '〒',$_POST['new_postal'];
-                            echo '<input type="hidden" name="postal_cord" value="',$_POST['new_postal'],'"><br><';
+                            echo '<input type="hidden" name="postal_cord" value="',$_POST['new_postal'],'"><br>';
                         }?>
 
                         <?php if(isset($_POST['send_name'])){
