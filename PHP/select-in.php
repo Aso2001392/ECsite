@@ -28,7 +28,7 @@
                     </div>
                     <hr class="sen"></hr>
 
-                    <label>甘い匂いが好き</label>
+                    <label>Q3.甘い匂いが好き</label>
                     <div class="select">
                         <label class="checkbox"><input type="radio" class="abc" name="sweet" value="2" required>はい</label>
                         <label class="checkbox"><input type="radio" class="abc" name="sweet" value="0" required>いいえ</label>
@@ -36,7 +36,7 @@
                     </div>
                     <hr class="sen"></hr>
 
-                    <label>石鹸の匂いが好き</label>
+                    <label>Q4.石鹸の匂いが好き</label>
                     <div class="select">
                         <label class="checkbox"><input type="radio" class="abc" name="soap" value="2" required>はい</label>
                         <label class="checkbox"><input type="radio" class="abc" name="soap" value="0" required>いいえ</label>
@@ -44,7 +44,7 @@
                     </div>
                     <hr class="sen"></hr>
 
-                    <label>海の匂いが好き</label>
+                    <label>Q5.海の匂いが好き</label>
                     <div class="select">
                         <label class="checkbox"><input type="radio" class="abc" name="sea" value="2" required>はい</label>
                         <label class="checkbox"><input type="radio" class="abc" name="sea" value="0" required>いいえ</label>
@@ -52,7 +52,7 @@
                     </div>
                     <hr class="sen"></hr>
 
-                    <label>木や森の匂いが好き</label>
+                    <label>Q6.木や森の匂いが好き</label>
                     <div class="select">
                         <label class="checkbox"><input type="radio" class="abc" name="tree" value="2" required>はい</label>
                         <label class="checkbox"><input type="radio" class="abc" name="tree" value="0" required>いいえ</label>
@@ -60,7 +60,7 @@
                     </div>
                     <hr class="sen"></hr>
 
-                    <label>季節で夏が好き</label>
+                    <label>Q7.季節で夏が好き</label>
                     <div class="select">
                         <label class="checkbox"><input type="radio" class="abc" name="summer" value="2" required>はい</label>
                         <label class="checkbox"><input type="radio" class="abc" name="summer" value="0" required>いいえ</label>
