@@ -19,11 +19,6 @@
 
                 $_SESSION['customer']['id'] = $id;
                 $_SESSION['customer']['name']=$_POST['name'];
-                $_SESSION['customer']['address']=$_POST['address'];
-                $_SESSION['customer']['postal']=$_POST['postal'];
-                $_SESSION['customer']['mail']=$_POST['mail'];
-                $_SESSION['customer']['pass']=$_POST['pass'];
-
                 ?>
             </div>
         </div>

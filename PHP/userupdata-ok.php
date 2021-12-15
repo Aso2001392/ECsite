@@ -1,10 +1,10 @@
 <?php require_once 'css/header.php'; ?>
     <div class="main">
 
-        <!-- サイドバー -->
-        <?php require_once 'css/menu.php'; ?>
+    <!-- サイドバー -->
+    <?php require_once 'css/menu.php'; ?>
 
-        <!-- メイン画面 -->
+    <!-- メイン画面 -->
     <div class="contentB">
         <div class="box">
             <div class="box-user">
@@ -16,11 +16,8 @@
                 if($sql -> rowCount()>0){
                     echo '<p>更新完了しました。</p>';
                     $_SESSION['customer']['name']=$_POST['name'];
-                    $_SESSION['customer']['address']=$_POST['address'];
-                    $_SESSION['customer']['postal']=$_POST['postal'];
-                    $_SESSION['customer']['mail']=$_POST['mail'];
-                    $_SESSION['customer']['pass']=$_POST['pass'];
                     echo '<p><a href="index.php" class="button">トップページへ</a></p>';
+
 
                 }else{
                     echo '入力エラー';
