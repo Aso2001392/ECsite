@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php
+session_start();
+header('Expires:-1');
+header('Cache-Control:');
+header('Pragma:');
+?>
 <?php require_once 'css/db.php'; ?>
 <!DOCTYPE html>
 <html lang="ja">
