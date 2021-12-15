@@ -79,14 +79,27 @@
                             <div class="send_ad">
                                 <h4>-配送先住所-</h4>
                                 <input type="radio" name="send_name" value="0" checked>登録住所
-                                <p>郵便番号<br><?PHP echo $_SESSION['customer']['postal'] ?></p>
-                                <p>住所<br><?php echo $_SESSION['customer']['address']?></p>
+                                <!--DB接続が必要-->
+                                <?php
+                                $sql=$pdo->prepare('select * from customers where customer_id=?');
+                                $sql->execute([$_SESSION['customer']['id']]);
+                                $postal_code='';
+                                $address='';
+                                foreach ($sql as $row){
+                                    $address=$row['address'];
+                                    $postal_code=$row['postal_code'];
+                                }
+                                ?>
+                                <p>郵便番号<br><?PHP echo $postal_code ?></p>
+                                <p>住所<br><?php echo $address?></p>
                             </div>
                             <div class="send_ad">
                                 <br>
                                 <input type="radio" name="send_name" value="1">別の住所に送る
-                                <p>郵便番号<br><input type="text" name="new_postal" value="<?php echo $_SESSION['customer']['postal']?>"></p>
-                                <p>住所<br><input type="text"name="new_address" value="<?php echo $_SESSION['customer']['address']?>"></p>
+                                <p>郵便番号<br>
+                                <p style="color:crimson">※ハイフンなしの半角数字7桁</p>
+                                <input type="text" name="new_postal"  id="郵便番号" onKeyUp="$('#郵便番号').zip2addr('#住所');" placeholder="Postal code" pattern="^([0-9]{7})$" title="※ハイフンなしの半角数字7桁で入力してください" autocomplete="off" value="<?php echo $postal_code?>"></p>
+                                <p>住所<br><input type="text"name="new_address" id="住所" placeholder="Address" value="<?php echo $address?>"></p>
                             </div>
                         </div>
 

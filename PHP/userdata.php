@@ -10,11 +10,15 @@
             <?php
             $name=$address=$postal=$mail=$pass='';
             if(isset($_SESSION['customer'])){
+                $sql=$pdo->prepare('select * from customers where customer_id=?');
+                $sql->execute([$_SESSION['customer']['id']]);
                 $name=$_SESSION['customer']['name'];
-                $address=$_SESSION['customer']['address'];
-                $postal=$_SESSION['customer']['postal'];
-                $mail=$_SESSION['customer']['mail'];
-                $pass=$_SESSION['customer']['pass'];
+                foreach ($sql as $row){
+                    $address=$row['address'];
+                    $postal=$row['postal_code'];
+                    $mail=$row['mail'];
+                    $pass=$row['pass'];
+                }
             } ?>
             <!--代入したものを表示-->
             <div class="box">
