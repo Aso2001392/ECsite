@@ -432,20 +432,21 @@ table {
 
 /*画像、名前、値段などの要素*/
 .recom{
-    height: 200px;
+    height: 100%;
     padding-left: 10px;
     margin-top: 30px;
+    display: flex;
 }
 
 /*画像を左側に*/
 .recom_img{
     float: left;
     margin: 0 auto;
-    height: 180px;
-    width: 270px;
+    height: 100%;
 }
 .recom_img img{
     height: 180px;
+    width: 270px;
 }
 
 
@@ -453,6 +454,7 @@ table {
 /*名前、説明などの要素*/
 .recom_de{
     text-align: left;
+    height: 100%;
 }
 
 
