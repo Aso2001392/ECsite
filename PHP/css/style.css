@@ -190,6 +190,7 @@ a:hover{
 
 /*香水診断へのリンク*/
 a.btn-gradient {
+    margin: 0 0 0 10px;
     font-size: 20px;
     color: #fff;
     border: 2px solid #fff;
@@ -204,6 +205,7 @@ a.btn-gradient {
 /*インデックスの大きな花の画像*/
 .top{
     height: 350px;
+    margin-bottom: 20px;
 }
 
 /*ピックアップなどの文字*/
