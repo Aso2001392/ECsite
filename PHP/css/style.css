@@ -457,7 +457,15 @@ table {
     height: 100%;
 }
 
-
+.recom_img a{
+    text-decoration: none;
+    color:black;
+    transition: 1.0s ;
+}
+.recom_img a:hover{
+    background-position: 0 0;
+    opacity: 0.5 ;
+}
 
 
 
