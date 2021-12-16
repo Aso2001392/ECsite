@@ -325,17 +325,17 @@ table {
 /*-----------------------------------商品詳細-----------------------------------*/
 /*商品詳細に表示される画像*/
 .img_detail{
-    width: 350px;
+    width: 30%;
     margin: 5%;
 }
 /*商品詳細に表示される名前、画像、価格、カートボタンを横並びにする*/
 .detail{
     display:flex;
-    margin-left: 10%;
+    margin-left: 3%;
 }
 /*商品詳細に表示される名前、価格、カートボタンの上の余白*/
 .detail_name{
-    margin-top: 180px;
+    margin-top: 150px;
 }
 
 
@@ -432,17 +432,17 @@ table {
 
 /*画像、名前、値段などの要素*/
 .recom{
-    height: 200px;
+    height: 100%;
     padding-left: 10px;
     margin-top: 30px;
+    display: flex;
 }
 
 /*画像を左側に*/
 .recom_img{
     float: left;
     margin: 0 auto;
-    height: 180px;
-    width: 270px;
+    height: 100%;
 }
 .recom_img img{
     height: 180px;
@@ -453,9 +453,18 @@ table {
 /*名前、説明などの要素*/
 .recom_de{
     text-align: left;
+    height: 100%;
 }
 
-
+.recom_img a{
+    text-decoration: none;
+    color:black;
+    transition: 1.0s ;
+}
+.recom_img a:hover{
+    background-position: 0 0;
+    opacity: 0.5 ;
+}
 
 
 
