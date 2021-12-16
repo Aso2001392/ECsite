@@ -211,7 +211,7 @@ a.btn-gradient {
     padding: 5px 10px;
     border: 3px solid #000;
     width:100px;
-    margin-top: 30px;
+    margin: 30px 0 20px 10px;
 
 }
 
@@ -256,7 +256,6 @@ a.btn-gradient {
 
 /*ランキング表示*/
 .rankicon{
-    margin-top: 10px;
     width: 45px;
 }
 
@@ -370,6 +369,16 @@ table {
 
 }
 
+.cart a{
+    text-decoration: none;
+    color:black;
+    transition: 1.0s ;
+}
+.cart a:hover{
+    background-position: 0 0;
+    opacity: 0.5 ;
+}
+
 
 
 
@@ -422,7 +431,7 @@ table {
 
 /*チェックボックスの間隔*/
 .checkbox{
-    margin-right: 20px;
+    margin-left: 20px;
 
 }
 
@@ -459,6 +468,7 @@ table {
 .recom_de{
     text-align: left;
     height: 100%;
+    margin-left: 10px;
 }
 
 
@@ -566,7 +576,7 @@ table {
     /*------------------------------------ヘッダー---------------------------------------*/
     /*ヘッダーのバナー*/
     .logo{
-        width: 70%;
+        width: 150px;
         padding-top: 0;
         margin-left: 0;
     }
@@ -576,8 +586,6 @@ table {
     }
     /*ヘッダー右側のメニュー*/
     .headermenu2{
-        /*float: right;*/
-        /*display: flex;*/
         width: 100%;
         display: inline-block;
     }
@@ -589,13 +597,13 @@ table {
     }
     /*メニュー下部*/
     .search{
-
+        float: right;
+        margin-right: 20px;
     }
     /*ヘッダー右側のメニューのテキストボックス*/
     .text {
-        width: 80%;
+        width: 120px;
         height: 15px;
-        position:relative;
 
     }
     /*ヘッダーのアイコン*/
@@ -736,9 +744,6 @@ table {
         text-align: left;
     }
 
-
-
-    /*------------------------------------注文---------------------------------------*/
     /*カート画面の合計金額用ボックス*/
     .box2{
         text-align: center;
@@ -747,23 +752,35 @@ table {
 
 
     /*------------------------------------購入---------------------------------------*/
+
+    .cash1{
+        display:inline-block;
+    }
+    /*支払方法*/
+    .cash2{
+        display:flex;
+        margin-top: 20px;
+        width: 500px;
+    }
+    .send_ad{
+        margin-right: 40px;
+        margin-bottom: 20px;
+    }
+
     /*購入画面についてのCSS*/
     .cash{
         width: 100%;
         display: block;
         float: left;
-        margin: 0 0 20px 0;
     }
     .cash1{
-        text-align: center;
+        text-align: left;
+        margin: 0 0 50px 80px;
     }
     /*支払方法*/
     .cash2{
         display: inline-block;
-    }
-
-    .payment{
-        text-align: center;
+        width: 100%;
     }
 
     .send_ad{
