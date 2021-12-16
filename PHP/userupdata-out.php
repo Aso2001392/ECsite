@@ -8,7 +8,24 @@
     <!-- メイン画面 -->
     <div class="contentB">
         <div class="box">
-            <?php if($_POST['mail'] === $_POST['mail2']) { ?>
+            <!--ここにアドレス重複不可を追加-->
+            <?php
+            $count = 0;
+            $mail = 0;
+            $sql=$pdo->prepare('SELECT COUNT( * ) as cnt FROM customers where mail=?');
+            $sql->execute([$_POST['mail']]);
+            foreach ($sql as $row){
+                $count=$row['cnt'];
+            }
+            $sql2=$pdo->prepare('select * from customers where customer_id=?');
+            $sql2->execute([$_SESSION['customer']['id']]);
+            foreach ($sql2 as $row2){
+                $mail = $row2['mail'];
+            }
+            ?>
+            <?php if($_POST['mail'] === $_POST['mail2']) {
+            if($_POST['mail'] === $mail || $count==0){
+            ?>
             <h3>下記内容でお間違いがなければ確定を押してください。</h3>
 
             <div class="box-user">
@@ -26,13 +43,17 @@
                     <input type="hidden" name="pass" value="<?=$_POST['pass'] ?>" />
                     <input type="hidden" name="id" value="<?=$_POST['id'] ?>" />
                     <p><a href="login.php" class="button">戻る</a><button type="submit" value="send" class="button" >確定</button></p></div>
-                </form>
-            </div>
-        <?php } else { ?>
+            </form>
+        </div>
+        <?php }else{?>
+            <h3>既に使われているメールアドレスです。</h3>
+            <a href="userdata.php" class="button" />戻る</a>
+
+        <?php }} else { ?>
             <h3>メールアドレスが違います。</h3>
             <a href="userdata.php" class="button" />戻る</a>
         <?php } ?>
-        </div>
     </div>
+</div>
 </div>
 <?php require 'css/footer.php'; ?>
