@@ -254,6 +254,13 @@ a.btn-gradient {
     height: 80px;
 }
 
+/*ランキング表示*/
+.rankicon{
+    margin-top: 10px;
+    width: 45px;
+}
+
+
 
 /*-----------------------------------会員情報入力-----------------------------------*/
 /*会員情報入力画面のbox*/
@@ -441,20 +448,19 @@ table {
 /*画像を左側に*/
 .recom_img{
     float: left;
-    margin: 0 auto;
     height: 100%;
 }
 .recom_img img{
-    height: 180px;
+    height: 200px;
+
 }
-
-
 
 /*名前、説明などの要素*/
 .recom_de{
     text-align: left;
     height: 100%;
 }
+
 
 .recom_img a{
     text-decoration: none;
@@ -762,6 +768,23 @@ table {
 
     .send_ad{
     }
+
+
+    /*------------------------------------アンケート---------------------------------------*/
+    /*画像、名前、値段などの要素*/
+    .recom{
+        padding-left: 10px;
+        margin-top: 30px;
+        display: inline-block;
+    }
+
+    /*画像*/
+    .recom_img img{
+        height: 100px;
+
+    }
+
+
 
 
 

@@ -16,10 +16,13 @@
                 <p class="pick-text">RANKING</p>
                 <div class="img_pick">
                     <?php
+                    $cnt=1;
                     foreach ($pdo->query('select items_id,sum(num) from purchase_detail group by items_id order by sum(num) DESC LIMIT 0,3') as $row) {
                         echo '<div class="tate">';
+                        echo '<img src="img/rank',$cnt,'.jpg" class="rankicon"><br>';
                         echo '<a href="detail.php?id=',$row['items_id'],'"><img src="img/items/',$row['items_id'],'.jpg" class="check1"></a><br>';
                         echo '<a class="check2" href="detail.php?id=',$row['items_id'],'">check more</a>';
+                        $cnt++;
                         echo '</div>';
                     }
                     ?>
