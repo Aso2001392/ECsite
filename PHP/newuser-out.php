@@ -7,8 +7,17 @@
         <!-- メイン画面 -->
         <div class="contentB">
             <div class="box">
+                <!--ここにアドレス重複不可を追加-->
+                <?php
+                $sql=$pdo->prepare('SELECT COUNT( * ) as cnt FROM customers where mail=?');
+                $sql->execute([$_POST['mail']]);
+                $count = 0;
+                foreach ($sql as $row){
+                    $count=$row['cnt'];
+                }
+                ?>
                 <!--$_POST['mail']と$_POST['mail2']を比較-->
-                <?php if($_POST['mail'] === $_POST['mail2']) { ?>
+                <?php if($_POST['mail'] === $_POST['mail2'] && $count==0) { ?>
 
                     <h3>下記内容でお間違いがなければ確定を押してください。</h3>
 
@@ -28,7 +37,14 @@
                             <p><button type="submit" value="send" class="button" formaction="newuser-in.php" formmethod="post">戻る</button>
                                 <button type="submit" value="send" class="button" formaction="newuser-ok.php" formmethod="post">確定</button></p></div>
                     </form>
-
+                <?php } else if($count!=0){ ?>
+                    <h3>既に使われているメールアドレスです</h3>
+                    <form>
+                        <input type="hidden" name="name" value="<?=$_POST['name'] ?>" />
+                        <input type="hidden" name="postal" value="<?=$_POST['postal'] ?>" />
+                        <input type="hidden" name="address" value="<?=$_POST['address'] ?>" />
+                        <button type="submit" value="send" class="button" formaction="newuser-in.php" formmethod="post">戻る</button>
+                    </form>
                 <?php } else { ?>
                     <h3>メールアドレスが違います。</h3>
                     <form>
