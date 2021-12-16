@@ -15,18 +15,14 @@
             <div class="index">
                 <p class="pick-text">RANKING</p>
                 <div class="img_pick">
-                    <div class="tate">
-                        <a href="detail.php?id=I0052"><img src="img/rank1.png" class="check1"></a><br>
-                        <a class="check2" href="detail.php?id=I0052">check more</a>
-                    </div>
-                    <div class="tate">
-                        <a href="detail.php?id=I0030"><img src="img/rank2" class="check1"></a><br>
-                        <a class="check2" href="detail.php?id=I0030">check more</a>
-                    </div>
-                    <div class="tate">
-                        <a href="detail.php?id=I0021"><img src="img/rank3.png" class="check1"></a><br>
-                        <a class="check2" href="detail.php?id=I0021">check more</a>
-                    </div>
+                    <?php
+                    foreach ($pdo->query('select items_id,sum(num) from purchase_detail group by items_id order by sum(num) DESC LIMIT 0,3') as $row) {
+                        echo '<div class="tate">';
+                        echo '<a href="detail.php?id=',$row['items_id'],'"><img src="img/items/',$row['items_id'],'.jpg" class="check1"></a><br>';
+                        echo '<a class="check2" href="detail.php?id=',$row['items_id'],'">check more</a>';
+                        echo '</div>';
+                    }
+                    ?>
                 </div>
                 <p class="pick-text">PICK UP</p>
                 <div class="img_pick">
