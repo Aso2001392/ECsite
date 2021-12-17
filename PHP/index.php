@@ -33,6 +33,7 @@
                 <p class="pick-text">PICK UP</p>
                 <?php
                 $id= $item1=$item2=$item3=0;
+                $item1_name=$item2_name=$item4_name='';
                 $sql=$pdo->query('select max(item_id) from items');
                 foreach ($sql as $row){
                     $id=$row['max(item_id)'];
@@ -57,19 +58,28 @@
                 if($item3<=999){
                     $item3=sprintf('%04d',$item3);
                 }
+                $name=[];
+                for($i=0;$i<3;$i++) {
+                    $id=sprintf('%04d',$array[$i]);
+                    $sql2 = $pdo->prepare('select * from items where item_id=?');
+                    $sql2->execute(["I".$id]);
+                    foreach ($sql2 as $row){
+                        $name[$i]=$row['item_name'];
+                    }
+                }
                 ?>
                 <div class="img_pick">
                     <div class="tate">
                         <a href="detail.php?id=I<?=$item1?>"><img src="img/items/I<?=$item1?>.jpg" class="check1"></a><br>
-                        <a class="check2" href="detail.php?id=I<?=$item1?>">check more</a>
+                        <a class="check2" href="detail.php?id=I<?=$item1?>"><?=$name[0]?></a>
                     </div>
                     <div class="tate">
                         <a href="detail.php?id=I<?=$item2?>"><img src="img/items/I<?=$item2?>.jpg" class="check1"></a><br>
-                        <a class="check2" href="detail.php?id=I<?=$item2?>">check more</a>
+                        <a class="check2" href="detail.php?id=I<?=$item2?>"><?=$name[1]?></a>
                     </div>
                     <div class="tate">
                         <a href="detail.php?id=I<?=$item3?>"><img src="img/items/I<?=$item3?>.jpg" class="check1"></a><br>
-                        <a class="check2" href="detail.php?id=I<?=$item3?>">check more</a>
+                        <a class="check2" href="detail.php?id=I<?=$item3?>"><?=$name[2]?></a>
                     </div>
                 </div>
                 <img src="img/baner.jpg" class="check3">
