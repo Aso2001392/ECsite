@@ -21,7 +21,10 @@
                         echo '<div class="tate">';
                         echo '<img src="img/rank',$cnt,'.jpg" class="rankicon"><br>';
                         echo '<a href="detail.php?id=',$row['items_id'],'"><img src="img/items/',$row['items_id'],'.jpg" class="check1"></a><br>';
-                        echo '<a class="check2" href="detail.php?id=',$row['items_id'],'">check more</a>';
+                        $item = $pdo->prepare('select item_name from items where item_id = ?');
+                        $item->execute([$row['items_id']]);
+                        $result = $item->fetch();
+                        echo '<a class="check2" href="detail.php?id=',$row['items_id'],'">',$result['item_name'],'</a>';
                         $cnt++;
                         echo '</div>';
                     }
