@@ -71,15 +71,15 @@
                 <div class="img_pick">
                     <div class="tate">
                         <a href="detail.php?id=I<?=$item1?>"><img src="img/items/I<?=$item1?>.jpg" class="check1"></a><br>
-                        <a class="check2" href="detail.php?id=I<?=$item1?>"><?=$name[0]?></a>
+                        <a class="check2" style="font-weight: bold" href="detail.php?id=I<?=$item1?>"><?=$name[0]?></a>
                     </div>
                     <div class="tate">
                         <a href="detail.php?id=I<?=$item2?>"><img src="img/items/I<?=$item2?>.jpg" class="check1"></a><br>
-                        <a class="check2" href="detail.php?id=I<?=$item2?>"><?=$name[1]?></a>
+                        <a class="check2" style="font-weight: bold" href="detail.php?id=I<?=$item2?>"><?=$name[1]?></a>
                     </div>
                     <div class="tate">
                         <a href="detail.php?id=I<?=$item3?>"><img src="img/items/I<?=$item3?>.jpg" class="check1"></a><br>
-                        <a class="check2" href="detail.php?id=I<?=$item3?>"><?=$name[2]?></a>
+                        <a class="check2" style="font-weight: bold" href="detail.php?id=I<?=$item3?>"><?=$name[2]?></a>
                     </div>
                 </div>
                 <img src="img/baner.jpg" class="check3">
